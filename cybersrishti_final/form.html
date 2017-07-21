@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+<meta charset="utf-8" />
+<title>&#956;CR</title>
+<meta property="og:title" content="Cybersrishti"/>
+<meta property="og:image" content="http://cybersrishti.org/images/logo.png"/>
+<meta property="og:site_name" content="Cybersrishti Technical Festival JIIT  Noida"/>
+<meta property="og:url" content="http://www.Cybersrishti.org"/>
+<meta property="og:description" content="Official Website of the Cybersrishti"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="EN"/>
+<meta name="document-type" content="PUBLIC"/>
+<meta name="Keywords" content="ucr, &#956;CR, microcontroller, robotics, jiit, microcontroller based systems and robotics hub, systems"/>
+<meta name="googlebot" content="index,follow,archive"/>
+<meta name="msnbot" content="index,follow,archive"/>
+<meta name="slurp" content="index,follow,archive"/>
+<meta name="author" content="GDG" />
+<meta name="robots" content="index,follow"/>
+<meta name="robots" content="all"/>
+<meta name="publisher" content="" />
+<meta name="copyright" content="" />
+<meta name="language" content="en" />
+<meta name="revisit-after" content="1 days" />
+<meta name="description" content="Cybersrishti Technical Festival of Jaypee Institute of Information Technology.">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../style/images/favicon.png" />
+
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css"  media="screen,projection"/>
+     <!-- <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> -->
+
+      <!--Let browser know website is optimized for mobile-->
+    <title>Cybersrishti | JIIT Noida</title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+    </head>
+
+    <body class="#ede7f6 deep-purple lighten-5">
+      <!--Import jQuery before materialize.js-->
+<!-- 
+<div class="navbar-fixed ">
+    <nav class="#4a148c purple darken-4  white-text">
+      <div class="nav-wrapper">
+        <a href="index.php" class="brand-logo center">Monero Maze Registration</a>
+      </div>
+    </nav>
+  </div> -->
+
+
+<div class="container z-depth-3 white" style="padding:5%;">
+<!-- <h5 class="purple-text">Register for</h5> -->
+
+<div class="row" >
+    <form class="col s12" name="myForm" action="register.php" onsubmit="return validateForm();" method="post" autocomplete="off">
+      <div class="row">
+    <div class="input-field col s12">
+    <label>Select College:</label><br><br>
+    <select onchange="show_fields1();" id="jiit_ian" name="jiit_ian">
+      <option value="" selected disabled>Select</option>
+      <option value="1">JIIT(Sec-62,Sec-128) </option>
+      <option value="2">Other</option>
+    </select>
+  </div>
+  </div>
+  <input type="hidden" name="ename" id="event_name"> 
+  <div class="col s12" id="form_type"></div>
+<!--     <div class="row" id="form_field_show" style="display: none;">
+       <select onchange="show_fields();" id="members" name="no_of_members">
+      <option value="" selected disabled>Other</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    </div>
+    <div class="row" id="form_field_show2" style="display: none;">
+       <select onchange="show_fields2();" id="jiitmember" name="jiit_member">
+      <option value="" selected disabled>JIIT</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    </div> -->
+
+   <div class="row" id="form_fields">
+  </div>
+          <!-- <div class="g-recaptcha" data-sitekey="6Ld2WQgUAAAAAOP4jzTS72qt-Bl4jsMIyTf7lCzt"></div> --><br><br>
+  <div class="row" id="form_fields1">
+  </div>
+
+    </form>
+</div>
+  </div>
+
+
+
+
+
+
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+  <script>
+
+  function validateForm() {
+
+  var count=document.getElementById('members').value;
+
+    for(var i=1; i<=count; i++)
+ 	{
+
+    var x = document.forms["myForm"]["fname"+i].value;
+    if (/^[A-Za-z ]+$/.test(x)==false) {
+
+        alert('Enter valid first name');
+        return false;
+    }
+
+    var x = document.forms["myForm"]["lname"+i].value;
+    if (/^[A-Za-z ]+$/.test(x)==false) {
+
+        alert('Enter valid last name');
+        return false;
+    }
+
+    var x = document.forms["myForm"]["email"+i].value;
+
+     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (re.test(x)==false) {
+        alert('Enter valid email');
+        return false;
+    }
+
+    var x = document.forms["myForm"]["college"+i].value;
+    if (/^[A-Za-z ]+$/.test(x)==false) {
+
+        alert('Enter valid college name');
+        return false;
+    }
+
+
+    var x = document.forms["myForm"]["city"+i].value;
+  if (/^[A-Za-z ]+$/.test(x)==false) {
+
+        alert('Enter valid city name');
+        return false;
+    }
+
+
+
+     var x = document.forms["myForm"]["number"+i].value;
+     var cont = /^[0-9]+$/;
+    if (cont.test(x)==false) {
+        alert('Enter valid contact no.');
+        return false;
+    }
+
+
+
+     var x = document.forms["myForm"]["address"+i].value;
+
+  var cont = /^[a-zA-Z0-9\s,'-]*$/;
+
+    if (cont.test(x)==false) {
+       alert('Enter valid address');
+        return false;
+
+    }
+
+
+ 	 }
+}
+function getParamValue(paramName)
+{
+    var url = window.location.search.substring(1); //get rid of "?" in querystring
+    var qArray = url.split('&'); //get key-value pairs
+    for (var i = 0; i < qArray.length; i++) 
+    {
+        var pArr = qArray[i].split('='); //split key and value
+        if (pArr[0] == paramName) 
+            return pArr[1]; //return value
+    }
+}
+var event_name = getParamValue('event_name');
+var max = getParamValue('max');
+// alert(''+event_name+max);
+document.getElementById('event_name').value=event_name;
+function show_fields1()
+{
+  var count=document.getElementById('jiit_ian').value;
+  if(count==1){
+    //JIIT
+    document.getElementById('form_type').innerHTML='';
+    document.getElementById('form_fields').innerHTML='';
+    var s1="<br><h5>JIIT(Sec-62,Sec-128)</h5>  \
+    <div class='row'> \
+  <select onchange='show_fields2();' id='jiit_select'>\
+      <option value='' selected disabled>No of Participants</option> ";
+    for(var x=0;x<max;x++)
+    {
+      var j=x+1;
+        s1+="<option value='"+j+"'>"+j+"</option>";
+    }
+    s1+="</select></div>";
+    document.getElementById('form_type').innerHTML+=s1;
+   $('select').material_select();
+  }
+  if(count==2){
+    //else
+    document.getElementById('form_type').innerHTML='';
+    document.getElementById('form_fields').innerHTML='';
+      var s2="<br><h5>Other</h5>  \
+    <div class='row'> \
+  <select onchange='show_fields();' id='other_select'>\
+      <option value='' selected disabled>No of Participants</option> ";
+  for(var x=0;x<max;x++)
+    {
+      var j=x+1;
+        s2+="<option value='"+j+"'>"+j+"</option>";
+    }
+    s2+="</select></div>";
+    document.getElementById('form_type').innerHTML+=s2;
+   $('select').material_select();
+  }
+}
+function show_fields2() {
+  //JIIT
+  var count=document.getElementById('jiit_select').value;
+ document.getElementById('form_fields').innerHTML='';
+for(var i=0; i<count; i++)
+ {
+ j=i+1;
+ if(j==1){
+ document.getElementById('form_fields').innerHTML+='<br/><h6><b>Participant '+j+' </b></h6>  \
+ <div class="input-field col s6">\
+ <input type="text" name="tname" class="validate" required >\
+ <label for="team_name">Team Name</label>\
+ </div>\
+ <div class="input-field col s6"> \
+  <input id="first_name" type="text" name="fname'+j+'" class="validate" required>\
+  <label for="first_name">Full Name</label>\
+  </div>\
+  <div class="input-field col s6">\
+  <input id="email" type="email" name="email'+j+'" class="validate" required>\
+  <label for="email" data-error="wrong" data-success="right">Email</label>\
+  </div>\
+  <div class="input-field col s12">\
+  <input id="enroll" type="text" name="enroll'+j+'" class="validate" required>\
+  <label for="Enroll" data-error="wrong" data-success="right">Enroll</label>\
+  </div>\
+  <div class="row">\
+  <div class="input-field col s12">\
+  <i class="material-icons prefix">phone</i>\
+  <input id="icon_telephone" name="number'+j+'" maxlength="10" type="text" class="validate" required>\
+  <label for="icon_telephone">Contact No</label>\
+  </div>\
+  </div>\
+  <div class="input-field col s12">\
+  <select id="year'+j+'" name="year'+j+'"  onchange="change_year('+j+')" required>\
+  <option value="" disabled selected>Select your year</option>\
+  <option value="1">Undergraduate 1st year</option>\
+  <option value="2">Undergraduate 2nd year</option>\
+  <option value="3">Undergraduate 3rd year</option>\
+  <option value="4">Undergraduate 4th year</option>\
+  <option value="other">Other</option>\
+  </select>\
+  </div>\
+  <div class="input-field col s12" id="year_other'+j+'" >\
+  </div>';
+
+}
+else{
+   document.getElementById('form_fields').innerHTML+='<br/><h6><b>Participant '+j+' </b></h6>  \
+ <div class="input-field col s12"> \
+  <input id="first_name" type="text" name="fname'+j+'" class="validate" required>\
+  <label for="first_name">Full Name</label>\
+  </div>\
+  <div class="input-field col s12">\
+  <input id="enroll" type="text" name="enroll'+j+'" class="validate" required>\
+  <label for="Enroll" data-error="wrong" data-success="right">Enroll</label>\
+  </div>';
+}
+
+ }
+ if(count!='')
+ {
+ document.getElementById('form_fields1').innerHTML='<button class="btn waves-effect waves-light #4a148c purple darken-4" type="submit" name="action">REGISTER</button>';
+  }
+  else
+  {
+   document.getElementById('form_fields1').innerHTML='';
+
+  }
+  $('select').material_select();  
+}
+  function show_fields()
+  {
+    //ELSE
+  var count=document.getElementById('other_select').value;
+ document.getElementById('form_fields').innerHTML='';
+  for(var i=0; i<count; i++)
+ {
+ j=i+1;
+ if(j==1){
+ document.getElementById('form_fields').innerHTML+='<br/><h6><b>Participant '+j+' </b></h6>  \
+ <div class="input-field col s6">\
+ <input type="text" name="tname" class="validate" required >\
+ <label for="team_name">Team Name</label>\
+ </div>\
+ <div class="input-field col s12"> \
+  <input id="first_name" type="text" name="fname'+j+'" class="validate" required>\
+  <label for="first_name">Full Name</label>\
+  </div>\
+  <div class="input-field col s12">\
+  <input id="email" type="email" name="email'+j+'" class="validate" required>\
+  <label for="email" data-error="wrong" data-success="right">Email</label>\
+  </div>\
+  <div class="input-field col s12">\
+  <input id="college" type="text" name="enroll'+j+'" class="validate" required>\
+  <label for="college">College</label>\
+  </div>\
+  <div class="input-field col s6">\
+  <input id="City" type="text" class="validate" name="city'+j+'" required>\
+  <label for="City">City</label>\
+  </div>\
+  <div class="row">\
+  <div class="input-field col s6">\
+  <i class="material-icons prefix">phone</i>\
+  <input id="icon_telephone" name="number'+j+'" maxlength="10" type="text" class="validate" required>\
+  <label for="icon_telephone">Contact No</label>\
+  </div>\
+  </div>\
+  <div class="input-field col s12">\
+  <select id="year'+j+'" name="year'+j+'"  onchange="change_year('+j+')" required>\
+  <option value="" disabled selected>Select your year</option>\
+  <option value="1">Undergraduate 1st year</option>\
+  <option value="2">Undergraduate 2nd year</option>\
+  <option value="3">Undergraduate 3rd year</option>\
+  <option value="4">Undergraduate 4th year</option>\
+  <option value="other">Other</option>\
+  </select>\
+  </div>\
+  <div class="input-field col s12" id="year_other'+j+'" >\
+  </div>';
+}else{
+   document.getElementById('form_fields').innerHTML+='<h6><b>Participant '+j+' </b></h6>  \
+ <div class="input-field col s6"> \
+  <input id="first_name" type="text" name="fname'+j+'" class="validate" required>\
+  <label for="first_name">Full Name</label>\
+  </div>\
+  <div class="input-field col s6">\
+  <input id="college" type="text" name="enroll'+j+'" class="validate" required>\
+  <label for="college">College</label>\
+  </div>';
+}
+
+ }
+ if(count!='')
+ {
+ document.getElementById('form_fields1').innerHTML='<button class="btn waves-effect waves-light #4a148c purple darken-4" type="submit" name="action">REGISTER</button>';
+  }
+  else
+  {
+   document.getElementById('form_fields1').innerHTML='';
+
+  }
+  $('select').material_select();
+  }
+
+
+  function change_year(i)
+  {
+  var yr=document.getElementById('year'+i).value;
+ if(yr=='other')
+ {
+ document.getElementById('year_other'+i).innerHTML='<input type="text" name="year_other'+i+'" class="validate" required><label for="first_name">Enter your year</label>';
+  }
+  else
+  {
+ document.getElementById('year_other'+i).innerHTML='';
+  }
+  }
+
+ $(document).ready(function() {
+    $('select').material_select();
+	});
+
+  </script>
+
+
+
+  </body>
+  </html>
